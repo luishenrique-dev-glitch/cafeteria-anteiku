@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conheça a Cafeteria Anteiku. Um bom café, uma pausa tranquila e sabor em cada detalhe.">
+  <meta name="theme-color" content="#111114">
+  <title>Anteiku — Café & boas pausas</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="mapa.css">
+  <link rel="stylesheet" href="interacoes.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+  <header class="cabecalho">
+    <a class="marca marca-com-logo" href="#inicio" aria-label="Anteiku, início"><img class="logo-anteiku" src="logo-anteiku.png" alt="Anteiku Cafeteria — xícara com flores vermelhas" width="1254" height="1254" fetchpriority="high"></a>
+    <nav aria-label="Navegação principal"><a href="#cardapio">Cardápio</a><a href="#sobre">Nossa essência</a><a href="#localizacao">Visite</a></nav>
+    <a class="botao botao-pequeno" href="#cardapio">Escolha seu café <span aria-hidden="true">↗</span></a>
+    <button class="botao botao-login" type="button" aria-haspopup="dialog" aria-controls="login-desconto">Entrar · 14% na primeira compra</button>
+  </header>
+  <dialog class="login-desconto" id="login-desconto" aria-labelledby="titulo-login" aria-describedby="descricao-login">
+    <button class="login-fechar" type="button" aria-label="Fechar janela de login">×</button>
+    <p class="sobretitulo">SUA PRIMEIRA PAUSA</p>
+    <h2 id="titulo-login">Um café com <em>desconto.</em></h2>
+    <p id="descricao-login">Entre na sua conta e ganhe 14% de desconto na primeira compra. O pedido é confirmado pelo WhatsApp.</p>
+    <p class="login-nota">Crie sua conta ou entre para solicitar o benefício. O e-mail ainda não é verificado.</p>
+    <form id="form-login">
+      <label for="login-acao">Como deseja continuar?</label>
+      <select id="login-acao"><option value="register">Criar conta</option><option value="login">Já tenho conta</option></select>
+      <label id="label-nome" for="login-nome">Seu nome</label>
+      <input id="login-nome" name="nome" autocomplete="name" required maxlength="80">
+      <label for="login-email">Seu e-mail</label>
+      <input id="login-email" name="email" type="email" autocomplete="email" required maxlength="254">
+      <label for="login-senha">Senha (mínimo de 8 caracteres)</label>
+      <input id="login-senha" name="password" type="password" autocomplete="new-password" required minlength="8" maxlength="128">
+      <button class="botao" type="submit">Criar conta</button>
+      <button class="link-texto" id="logout" type="button" hidden>Sair da conta</button>
+      <p id="login-feedback" role="status"></p>
+    </form>
+    <p class="login-nota">Seu cadastro é salvo na cafeteria. Nome e e-mail serão incluídos ao enviar o pedido pelo WhatsApp.</p>
+  </dialog>
+  <main id="conteudo">
+    <section class="hero" id="inicio" aria-labelledby="titulo-principal">
+      <div class="hero-texto">
+        <p class="sobretitulo"><span aria-hidden="true">✦</span> CAFÉ & BOAS PAUSAS</p>
+        <h1 id="titulo-principal">A vida pede<br>uma pausa.<br><em>E um bom café.</em></h1>
+        <p class="introducao">Desacelere, sinta o aroma e aproveite o momento. Na Anteiku, cada xícara é um convite para ficar mais um pouco.</p>
+        <a class="botao" href="#cardapio">Explore nosso cardápio <span aria-hidden="true">↗</span></a>
+        <div class="hero-nota"><span class="linha" aria-hidden="true"></span> Pequenos momentos. Grandes sabores.</div>
+      </div>
+      <div class="hero-arte" role="img" aria-label="Ilustração de uma xícara de café cremoso sobre um pires, em fundo verde escuro">
+        <span class="arte-legenda">UM MOMENTO SÓ SEU</span>
+        <div class="circulo circulo-um"></div><div class="circulo circulo-dois"></div>
+        <div class="pires"><div class="alca"></div><div class="xicara"><div class="cafe"><span class="creme creme-um"></span><span class="creme creme-dois"></span><span class="creme creme-tres"></span><span class="creme creme-quatro"></span><span class="creme-haste"></span></div></div></div>
+        <div class="selo">feito com<br><strong>calma.</strong><span aria-hidden="true">✦</span></div>
+        <span class="arte-rodape">ANTEIKU <span>EST. CAFÉ & AFETO</span></span>
+      </div>
+    </section>
+    <div class="faixa" aria-label="Nossa filosofia"><span>Café preparado na hora</span><span aria-hidden="true">✦</span><span>Sabor em cada detalhe</span><span aria-hidden="true">✦</span><span>Uma pausa bem merecida</span></div>
+    <section class="cardapio secao" id="cardapio" aria-labelledby="titulo-cardapio">
+      <div class="secao-cabecalho"><div><p class="sobretitulo">ESCOLHA O SEU FAVORITO</p><h2 id="titulo-cardapio">Seu próximo <em>bom momento.</em></h2></div><p>Do intenso ao cremoso,<br>um café para o seu ritmo.</p></div>
+      <div class="lista-produtos">
+        <article class="produto"><div class="produto-arte expresso" aria-hidden="true"><span class="numero">01 / CLÁSSICO</span><div class="mini-pires"><div class="mini-xicara"></div></div><span class="arte-descricao">Pequeno na xícara. Intenso no sabor.</span></div><div class="produto-conteudo"><div class="produto-titulo"><h3>Café Expresso</h3><span class="preco">R$ 8,00</span></div><p>Café intenso e preparado na hora. O clássico que transforma uma simples pausa.</p><span class="etiqueta">INTENSO & AROMÁTICO</span></div></article>
+        <article class="produto"><div class="produto-arte cappuccino" aria-hidden="true"><span class="numero">02 / CREMOSO</span><div class="mini-pires"><div class="mini-xicara"></div></div><span class="arte-descricao">Um abraço em forma de café.</span></div><div class="produto-conteudo"><div class="produto-titulo"><h3>Cappuccino</h3><span class="preco">R$ 12,00</span></div><p>Café com leite cremoso e um toque de chocolate. Para saborear sem pressa.</p><span class="etiqueta">SUAVE & ACONCHEGANTE</span></div></article>
+        <article class="produto">
+          <div class="produto-arte latte" aria-hidden="true"><span class="numero">03 / DELICADO</span><div class="mini-pires"><div class="mini-xicara"></div></div><span class="arte-descricao">Leveza para acompanhar sua pausa.</span></div>
+          <div class="produto-conteudo"><div class="produto-titulo"><h3>Café Latte</h3><span class="preco">R$ 14,00</span></div><p>Expresso com leite vaporizado e uma fina camada de espuma. Uma combinação suave e cremosa.</p><span class="etiqueta">LEVE & AVELUDADO</span></div>
+        </article>
+        <article class="produto">
+          <div class="produto-arte mocha" aria-hidden="true"><span class="numero">04 / CHOCOLATUDO</span><div class="mini-pires"><div class="mini-xicara"></div></div><span class="arte-descricao">Café e chocolate no mesmo encontro.</span></div>
+          <div class="produto-conteudo"><div class="produto-titulo"><h3>Mocha</h3><span class="preco">R$ 16,00</span></div><p>Expresso, chocolate e leite vaporizado, finalizados com espuma cremosa. Uma pausa com um toque de doçura.</p><span class="etiqueta">CREMOSO & ACHOCOLATADO</span></div>
+        </article>
+      </div>
+    </section>
+    <section class="sobre secao" id="sobre" aria-labelledby="titulo-sobre"><div class="sobre-simbolo sobre-com-logo" aria-hidden="true"><img class="logo-anteiku logo-destaque" src="logo-anteiku.png" alt="" width="1254" height="1254" loading="lazy"></div><div><p class="sobretitulo">A ESSÊNCIA ANTEIKU</p><h2 id="titulo-sobre">Mais que café.<br><em>Tempo para você.</em></h2><p>Acreditamos que os melhores momentos moram nas coisas simples: no aroma do café fresco, na primeira xícara do dia e numa boa conversa. A Anteiku é um convite para aproveitar tudo isso.</p><a class="link-texto" href="#cardapio">Encontre sua próxima pausa <span aria-hidden="true">↗</span></a></div></section>
+    <section class="localizacao secao" id="localizacao" aria-labelledby="titulo-localizacao">
+      <p class="sobretitulo">VENHA NOS VISITAR</p>
+      <h2 id="titulo-localizacao">Sua pausa tem <em>endereço.</em></h2>
+      <address class="endereco">Rua Antonio Francisco Domingues, nº 87<br><span>Fortaleza de Minas, Minas Gerais</span></address>
+      <p class="localizacao-convite">Esperamos você para um bom café.</p>
+      <div class="horarios" aria-labelledby="titulo-horarios">
+        <h3 id="titulo-horarios">Horário de funcionamento</h3>
+        <dl class="lista-horarios">
+          <div><dt>Segunda a sábado</dt><dd><time datetime="07:00">7h</time> às <time datetime="18:00">18h</time></dd></div>
+          <div><dt>Domingo</dt><dd><time datetime="07:00">7h</time> às <time datetime="14:00">14h</time></dd></div>
+        </dl>
+      </div>
+      <div class="contato-local">
+        <p class="sobretitulo">FALE COM A ANTEIKU</p>
+        <p>Tire suas dúvidas e converse com a gente pelo WhatsApp.</p>
+        <a class="link-texto" href="https://wa.me/5535997627216?text=Ol%C3%A1%21%20Gostaria%20de%20saber%20mais%20sobre%20a%20Anteiku." target="_blank" rel="noopener noreferrer">(35) 99762-7216 <span aria-hidden="true">↗</span><span class="somente-leitor"> (WhatsApp, abre em nova aba)</span></a>
+      </div>
+      <div class="mapa-container">
+        <div class="mapa-cabecalho">
+          <div class="mapa-identidade">
+            <span class="mapa-icone" aria-hidden="true"><svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+            <div><p class="sobretitulo">ENCONTRE A ANTEIKU</p><h3>Um café espera por você.</h3><p class="mapa-endereco">Rua Antonio Francisco Domingues, nº 87<br>Fortaleza de Minas · MG</p></div>
+          </div>
+          <a class="botao botao-mapa" href="https://www.google.com/maps/dir/?api=1&amp;destination=Rua%20Antonio%20Francisco%20Domingues%2C%2087%2C%20Fortaleza%20de%20Minas%2C%20MG%2C%20Brasil" target="_blank" rel="noopener noreferrer">Como chegar <span aria-hidden="true">↗</span><span class="somente-leitor"> (abre em nova aba)</span></a>
+        </div>
+        <iframe class="mapa" title="Mapa: Rua Antonio Francisco Domingues, 87, Fortaleza de Minas, Minas Gerais" src="https://www.google.com/maps?q=Rua%20Antonio%20Francisco%20Domingues%2C%2087%2C%20Fortaleza%20de%20Minas%2C%20MG%2C%20Brasil&amp;output=embed" width="1160" height="340" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="mapa-rodape"><span>FORTALEZA DE MINAS <span aria-hidden="true">/</span> MINAS GERAIS</span><span>Café & boas pausas. <span aria-hidden="true">✦</span></span></div>
+      </div>
+    </section>
+  </main>
+  <footer><a class="marca marca-rodape marca-com-logo" href="#inicio" aria-label="Anteiku, início"><img class="logo-anteiku" src="logo-anteiku.png" alt="Anteiku Cafeteria — xícara com flores vermelhas" width="1254" height="1254" loading="lazy"></a><p>Café & boas pausas.</p><span>Feito para saborear o momento.</span></footer>
+  <a class="whatsapp-flutuante" href="https://wa.me/5535997627216?text=Ol%C3%A1%21%20Gostaria%20de%20saber%20mais%20sobre%20a%20Anteiku." target="_blank" rel="noopener noreferrer" aria-label="Conversar com a Anteiku pelo WhatsApp (abre em nova aba)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M21 11.5a9 9 0 0 1-13.4 7.8L3 21l1.7-4.6A9 9 0 1 1 21 11.5Z"/><path d="M8 7.5c0 4 2.5 6.5 6.5 7l1.5-2-2.5-1-1 1a7 7 0 0 1-3-3l1-1-1-2.5Z"/></svg><span>WhatsApp</span></a>
+</body>
+</html>

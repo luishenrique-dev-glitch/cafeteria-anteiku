@@ -1,0 +1,59 @@
+.mapa-container {
+  margin-top: 42px;
+  padding: 8px;
+  border: 1px solid #782138;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #340e1b, #181218 65%);
+  box-shadow: 0 20px 50px #0006;
+  text-align: left;
+}
+.mapa-cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 26px 24px 30px;
+}
+.mapa-identidade { display: flex; align-items: flex-start; gap: 18px; min-width: 0; }
+.mapa-icone {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  border: 1px solid #8e1d38;
+  border-radius: 16px;
+  background: #b20c3024;
+  color: var(--caramelo);
+}
+.mapa-cabecalho .sobretitulo { font-size: 9px; margin-bottom: 10px; color: var(--caramelo); }
+.mapa-cabecalho h3 { font-size: 28px; line-height: 1.2; }
+.mapa-endereco { margin-top: 12px; font-size: 12px; line-height: 1.8; color: var(--suave); }
+.mapa-cabecalho .botao-mapa { margin: 0; flex-shrink: 0; border-radius: 8px; }
+.mapa-container .mapa { height: 400px; border-radius: 12px; background: #e8e8e8; }
+.mapa-rodape {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 19px 24px 12px;
+  color: var(--suave);
+  font-size: 9px;
+  letter-spacing: 1.6px;
+  line-height: 1.7;
+}
+.mapa-rodape > span:last-child { font: italic 14px Georgia, serif; letter-spacing: 0; }
+.mapa-rodape span span { color: var(--caramelo); margin-left: 8px; }
+@media (max-width: 800px) {
+  .mapa-cabecalho { padding: 22px 16px; gap: 18px; }
+  .mapa-identidade { gap: 12px; }
+  .mapa-cabecalho h3 { font-size: 24px; }
+}
+@media (max-width: 580px) {
+  .mapa-container { border-radius: 16px; padding: 6px; }
+  .mapa-cabecalho { flex-direction: column; align-items: stretch; padding: 20px 14px; }
+  .mapa-icone { width: 42px; height: 42px; border-radius: 12px; }
+  .mapa-cabecalho .botao-mapa { width: 100%; padding: 14px 18px; }
+  .mapa-container .mapa { height: 300px; border-radius: 10px; }
+  .mapa-rodape { padding: 16px 12px 10px; flex-wrap: wrap; font-size: 8px; gap: 8px; }
+}
